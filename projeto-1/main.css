@@ -1,0 +1,133 @@
+:root {
+  --primary-color: green;
+  --light-primary-color: lightgreen;
+  --title-color: rgb(49, 196, 49);
+}
+@font-face {
+  font-family: "idroid";
+  src: url("/fontes/idroid.otf") format("opentype");
+}
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.8em;
+}
+
+.special-title {
+  font-family: "idroid";
+  color: var(--title-color);
+  margin: 0.5em 0;
+  padding-left: 0.5em;
+}
+
+h3.special-title {
+  background-image: linear-gradient(
+    to right,
+    var(--light-primary-color) 30%,
+    transparent 70%
+  );
+}
+header {
+  padding: 2em 0 0;
+  background-image: linear-gradient(
+    to top,
+    var(--primary-color),
+    var(--light-primary-color)
+  );
+}
+
+.bg-green {
+  background-color: green;
+}
+
+nav {
+  padding: 1em;
+}
+
+nav > a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 0.7em;
+}
+header > * {
+  color: #fff;
+}
+header > p {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+main {
+  background-color: aquamarine;
+  padding-bottom: 1em;
+}
+
+section {
+  padding: 1em;
+  margin: auto;
+  max-width: 65%;
+  background-color: #fff;
+}
+
+img {
+  width: 100%;
+}
+
+picture {
+  width: 100%;
+  margin: 1em 0;
+  display: block;
+}
+
+img.small-size {
+  margin: auto;
+  width: unset;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card {
+  background-color: aquamarine;
+  border-radius: 8px;
+  margin: 1em 0;
+}
+
+.card-header {
+  background-color: aqua;
+  border-radius: 8px 8px 0 0;
+  color: #fff;
+  padding: 0.4em;
+}
+.card-body {
+  padding: 0.4em;
+}
+
+.version-list {
+  /* list-style: ; */
+  column-count: 2;
+  padding: 1em;
+}
+
+footer {
+  color: #fff;
+  padding: 0.4em;
+  text-align: center;
+}
+
+section:last-child {
+  border-radius: 0 0 8px 8px;
+}
