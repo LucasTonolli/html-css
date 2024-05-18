@@ -1,6 +1,8 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "idroid";
-  src: url("fontes/idroid.otf") format("opentype");
+  src: url("../fontes/idroid.otf") format("opentype");
 }
 
 :root {
@@ -41,6 +43,9 @@ body {
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.466);
   line-height: 2;
   font-size: 1.2em;
+  max-width: 500px;
+  margin: auto;
+  padding: 0 1.2em;
 }
 
 .special-title {
@@ -54,14 +59,14 @@ body {
   font-family: var(--font-text);
   text-align: justify;
   text-indent: 1.2em;
-  line-height: 1.4;
+  line-height: 2em;
   font-size: 1.1em;
 }
 
-h3.special-title {
+.special-title-bg {
   background-image: linear-gradient(
     to right,
-    var(--lighter-primary-color) 30%,
+    var(--light-primary-color) 5%,
     transparent 70%
   );
   padding-left: 0.5em;
@@ -89,6 +94,14 @@ nav > a {
   text-decoration: none;
   margin-left: 0.7em;
 }
+
+nav > a:hover {
+  background-color: var(--light-primary-color);
+  color: var(--darker-primary-color);
+  padding: 1em;
+  transition: 0.5s;
+  border-radius: 8px 8px 0 0;
+}
 header > * {
   color: #fff;
 }
@@ -99,10 +112,16 @@ header > p {
 }
 
 main {
-  padding-bottom: 1em;
   min-width: 400px;
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto 2.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.418);
+  border-radius: 0 0 8px 8px;
+}
+
+main strong {
+  color: var(--dark-primary-color);
+  font-weight: bold;
 }
 
 section {
@@ -123,7 +142,7 @@ picture {
 
 img.small-size {
   margin: auto;
-  width: unset;
+  width: 200px;
 }
 
 .text-center {
@@ -139,17 +158,27 @@ img.small-size {
 
 .video-container > iframe {
   position: absolute;
-  top: 5%;
+  top: 7%;
   left: 5%;
   width: 90%;
   height: 90%;
 }
 
 a.link {
-  color: var(--darker-primary-color);
+  color: var(--dark-primary-color);
   font-weight: bold;
+  background-color: var(--lighter-primary-color);
+  padding: 0.1em 0.2em;
 }
 
+a.link:hover {
+  text-decoration: underline;
+  color: var(--darker-primary-color);
+}
+
+a.link::after {
+  content: "\1F517";
+}
 .card {
   background-color: var(--lighter-primary-color);
   border-radius: 8px;
@@ -161,7 +190,7 @@ a.link {
   background-color: var(--dark-primary-color);
   border-radius: 8px 8px 0 0;
   color: #fff;
-  padding: 0.4em;
+  padding: 0.5em;
 }
 .card-body {
   padding: 0.4em 0.4em 1.5em;
