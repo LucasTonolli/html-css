@@ -26,12 +26,24 @@
   }
 
   section#login > div#img {
-    float: left;
+    float: right;
     width: 50%;
     height: 100vh;
+  }
+  section#login > div#form-login {
+    float: left;
+    width: 50%;
   }
 
   body {
     background-image: linear-gradient(to top, var(--verde), var(--lilas));
+  }
+
+  div#form-login > h1 {
+    font-size: 2em;
+  }
+
+  div#form-login > p {
+    font-size: 1.2em;
   }
 }
