@@ -30,19 +30,19 @@ section#login {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   background-color: #fff;
   width: 250px;
-  height: 500px;
+  height: 520px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.459);
 
   transition: width 0.5s;
   transition-timing-function: ease;
+  transform: translate(-50%, -50%);
 }
 
-#login > div#img {
+#login>div#img {
   background: var(--lilas) url(../imagens/img-login.jpg);
   height: 200px;
   background-size: cover;
@@ -55,11 +55,82 @@ section#login {
   display: block;
 }
 
-div#form-login > h1 {
+div#form-login>h1 {
   text-align: center;
   margin-bottom: 10px;
 }
 
-div#form-login > p {
+div#form-login>p {
   font-size: 0.8em;
+}
+
+form>div.field {
+  background-color: var(--lilas);
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  margin: 5px 0;
+}
+
+form label {
+  display: none;
+}
+
+div.field>i {
+  color: #fff;
+  font-size: 2em;
+  width: 40px;
+  padding: 5px;
+}
+
+div.field>input {
+  background-color: #71eeea;
+  font-size: 1em;
+  width: calc(100% - 44.5px);
+  height: 100%;
+  border: 1px solid var(--lilas);
+  border-radius: 8px;
+  transform: translateY(-11px);
+}
+
+div.field>input:focus-within {
+  background-color: #fff;
+}
+
+.button,
+input[type="submit"] {
+  display: block;
+  font-size: 1em;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  margin: .5em 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button {
+  background-color: #fff;
+  border: 1px solid var(--verde);
+  color: #152e2d;
+  text-decoration: none;
+  padding-top: 7px;
+}
+
+input[type="submit"] {
+  background-color: var(--verde);
+}
+
+input[type="submit"]:hover {
+  background-color: #152e2d;
+}
+
+.button:hover {
+  background-color: #6ae2de;
+}
+
+a.button>i {
+  font-size: .8em;
 }

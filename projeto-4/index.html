@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/medias.css" />
-    <title>Login</title>
-  </head>
-  <body>
-    <main>
-      <section id="login">
-        <div id="img"></div>
-        <div id="form-login">
-          <h1>Login</h1>
-          <p>
-            Seja Bem Vindo! Faça login para acessar sua conta e realizar as
-            configurações do seu ambiente
-          </p>
-          <form method="POST" action="login.php">
-            <div class="field">
-              <input
-                type="email"
-                name="login"
-                id="login"
-                placeholder="Seu email" />
-              <label for="login">Login</label>
-            </div>
 
-            <div class="field">
-              <input type="password" name="pwd" id="pwd" placeholder="Senha" />
-              <label for="login">Senha</label>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/medias.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <title>Login</title>
+</head>
+
+<body>
+  <main>
+    <section id="login">
+      <div id="img"></div>
+      <div id="form-login">
+        <h1>Login</h1>
+        <p>
+          Seja Bem Vindo! Faça login para acessar sua conta e realizar as
+          configurações do seu ambiente
+        </p>
+        <form method="POST" action="login.php" autocomplete="on">
+          <div class="field">
+            <i class="material-icons">person</i>
+            <input type="email" name="login" id="login" placeholder="Seu email" autocomplete="email" required />
+            <label for="login">Login</label>
+          </div>
+
+          <div class="field">
+            <i class="material-icons">vpn_key</i>
+            <input type="password" name="pwd" id="pwd" placeholder="Senha" autocomplete="current-password" required
+              minlength="8" />
+            <label for="login">Senha</label>
+          </div>
+          <input type="submit" value="Entrar">
+          <a href="esqueci.html" class="button">Esqueci a senha <i class="material-icons">mail</i></a>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
